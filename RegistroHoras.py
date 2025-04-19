@@ -75,7 +75,8 @@ opcion = wait.until(EC.element_to_be_clickable((
 opcion.click()
 
 
-hoy = datetime.today()
+#hoy = datetime.today()
+hoy=datetime(2025,4,30)
 
 #test de viernes
 #hoy=datetime.strptime("01/04/2025", "%d/%m/%Y").date()

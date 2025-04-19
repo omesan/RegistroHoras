@@ -12,12 +12,18 @@ import calendar
 import time
 
 
+from dotenv import load_dotenv
+import os
+
+
+
 # RUTA donde tengas el chromedriver
 CHROME_DRIVER_PATH  = "C:\\webDrivers\\chromedriver-win64\\chromedriver.exe"
 
 # Credenciales
-USUARIO = "reneome"
-CONTRASENA = "Capitole8@"
+# Credenciales
+USUARIO = os.getenv("USUARIO")
+CONTRASENA = os.getenv("CONTRASENA")
 
 # Inicializar el navegador
 service = Service(CHROME_DRIVER_PATH)
@@ -82,6 +88,8 @@ primer, ultimo = obtener_primer_y_ultimo_dia_habil(anio_actual, mes_actual)
 
 
 hora="8,75"
+
+
 # Días que queremos dejar seleccionados
 dias_permitidos = ["Lunes", "Martes", "Miércoles", "Jueves"]
 
